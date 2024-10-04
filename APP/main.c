@@ -2,7 +2,7 @@
  * Voting.c
  *
  * Created: 23/09/2024 11:50:12 م
- * Author : Admin
+ * Author : Hadeer Adel
  */ 
 
 #define F_CPU 8000000
@@ -63,6 +63,10 @@ int main(void)
 				CLCD_voidSendData((counter1/10)%10+48);
 				CLCD_voidSendData(counter1%10+48);
 			}
+			while(SW_u8GetPressed(sw1) == SW_PRESSED)
+			{
+				
+			}
 		}
 		
 		else if(SW_u8GetPressed(sw2) == SW_PRESSED)
@@ -83,6 +87,10 @@ int main(void)
 				CLCD_voidSendData(counter2/100+48);
 				CLCD_voidSendData((counter2/10)%10+48);
 				CLCD_voidSendData(counter2%10+48);
+			}
+			while(SW_u8GetPressed(sw2) == SW_PRESSED)
+			{
+				
 			}
 		}
 		
@@ -105,6 +113,10 @@ int main(void)
 				CLCD_voidSendData((counter3/10)%10+48);
 				CLCD_voidSendData(counter3%10+48);
 			}
+			while(SW_u8GetPressed(sw3) == SW_PRESSED)
+			{
+				
+			}
 		}
 		
 		else if(SW_u8GetPressed(sw4) == SW_PRESSED)
@@ -126,6 +138,10 @@ int main(void)
 				CLCD_voidSendData((counter4/10)%10+48);
 				CLCD_voidSendData(counter4%10+48);
 			}
+			while(SW_u8GetPressed(sw4) == SW_PRESSED)
+			{
+				
+			}
 		}
 		
 		else if(SW_u8GetPressed(sw5) == SW_PRESSED)
@@ -141,7 +157,7 @@ int main(void)
 			CLCD_voidSendString("D=0  ");
 			CLCD_voidSetPostion(1,1);	
 		}
-		_delay_ms(200);
+		//_delay_ms(50);
     }
 }
 
